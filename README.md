@@ -1,2 +1,2 @@
-# bikewatching
-106 lab 7
+# Bikewatching
+DSC 106 Lab 7 @ UCSD
