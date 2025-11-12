@@ -9,3 +9,19 @@ body {
     padding: 1em;
 }
 
+header.controls, header.time-stuff {
+    display: flex;
+    gap: 1em;
+    align-items: baseline;
+    margin-left: auto;
+}
+
+header.time-stuff em {
+    font-style: italic;
+    color: grey;
+}
+
+h1 {
+    margin-right: auto;
+    margin-bottom: 0;
+}

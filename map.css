@@ -37,15 +37,3 @@ body {
   stroke: #ff6600;
   stroke-width: 2px;
 }
-
-header.controls, header.time-stuff {
-    display: flex;
-    gap: 1em;
-    align-items: baseline;
-    margin-left: auto;
-}
-
-header.time-stuff em {
-    font-style: italic;
-    color: grey;
-}
