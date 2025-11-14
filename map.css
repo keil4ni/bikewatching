@@ -43,8 +43,8 @@ body {
 }
 
 #map svg circle:hover {
-  stroke: #ff6600;
-  stroke-width: 2px;
+  stroke: #00ffd5;
+  stroke-width: 3px;
 }
 
 .legend {
