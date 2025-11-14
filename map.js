@@ -76,19 +76,35 @@ const map = new mapboxgl.Map({
 map.on('load', async () => {
   // code
     map.addSource('boston_route', {
-        type: 'geojson',
-        data: 'https://bostonopendata-boston.opendata.arcgis.com/datasets/boston::existing-bike-network-2022.geojson',
+      type: 'geojson',
+      data: 'https://bostonopendata-boston.opendata.arcgis.com/datasets/boston::existing-bike-network-2022.geojson',
+    });
+
+    map.addSource('cambridge_route', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Recreation/Bike_Facilities/RECREATION_BikeFacilities.geojson',
     });
 
     map.addLayer({
-        id: 'bike-lanes',
-        type: 'line',
-        source: 'boston_route',
-        paint: {
-            'line-color': 'cyan',
-            'line-width': 3,
-            'line-opacity': 0.2,
-        },
+      id: 'bike-lanes-boston',
+      type: 'line',
+      source: 'boston_route',
+      paint: {
+        'line-color': 'cyan',
+        'line-width': 3,
+        'line-opacity': 0.2,
+      },
+    });
+
+    map.addLayer({
+      id: 'bike-lanes-cambridge',
+      type: 'line',
+      source: 'cambridge_route',
+      paint: {
+        'line-color': 'cyan',
+        'line-width': 3,
+        'line-opacity': 0.2,
+      },
     });
     
     const jsonurl = 'https://dsc106.com/labs/lab07/data/bluebikes-stations.json';
