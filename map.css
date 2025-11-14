@@ -31,9 +31,49 @@ body {
   stroke-width: 1px;
   transition: r 0.2s ease;
   pointer-events: auto;
+
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(
+      in oklch,
+      var(--color-departures) calc(100% * var(--departure-ratio)),
+      var(--color-arrivals)
+  );
+  fill: var(--color);
 }
 
 #map svg circle:hover {
   stroke: #ff6600;
   stroke-width: 2px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 1rem;
+  font-family: sans-serif;
+}
+
+.legend-title {
+  font-weight: bold;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.legend-item::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color);
+  flex-shrink: 0;
+  border: 1px solid #3332;
 }
