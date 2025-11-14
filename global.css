@@ -22,19 +22,46 @@ body {
     padding: 1em;
 }
 
-header.controls, header.time-stuff {
+header.time-controls {
     display: flex;
-    gap: 1em;
     align-items: baseline;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.time-filter {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-filter input[type="range"] {
+    -webkit-appearance: none;
+    width: 320px;     
+    height: 6px;
+    background: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.time-filter input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(0, 140, 140);
+    cursor: pointer;
+}
+
+.time-filter time,
+.time-filter em {
+    display: block;
+    font-size: 0.9rem;
     margin-left: auto;
 }
 
-header.time-stuff em {
-    font-style: italic;
+.time-filter em {
     color: grey;
-}
-
-h1 {
-    margin-right: auto;
-    margin-bottom: 0;
+    font-style: italic;
 }

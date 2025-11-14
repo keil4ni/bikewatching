@@ -56,7 +56,7 @@ body {
 }
 
 .legend-title {
-  font-weight: bold;
+  font-weight: 600;
   color: gray;
   text-transform: uppercase;
 }

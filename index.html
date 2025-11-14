@@ -18,22 +18,26 @@
     <script type="module" src="map.js"></script>
 </head>
 <body>
-    <h1>🚴🏼‍♀️ Bikewatching</h1>
-    
-    <header class = "controls">
-        Filter by time:
-        <input 
-            id = "time-slider"
-            type = "range" 
-            min = "-1" 
-            max = "1440"
-            value = "-1"
-        >
-    </header>
 
-    <header class = "time-stuff">
-        <time id = "selected-time"></time>
-        <em id = "any-time">(any time)</em>
+    <header class="time-controls">
+        <h1>🚴🏼‍♀️ Boston Bikewatching</h1>
+
+        <div class="time-filter">
+            <label>
+                Filter by time:
+                <input 
+                    id="time-slider"
+                    type="range"
+                    min="-1"
+                    max="1440"
+                    value="-1"
+                >
+            </label>
+            
+            <!-- <em id="any-time">(any time)</em> -->
+            <time id="selected-time"></time>
+            <em id="any-time">(any time)</em>
+        </div>
     </header>
 
     <div id = "map">
